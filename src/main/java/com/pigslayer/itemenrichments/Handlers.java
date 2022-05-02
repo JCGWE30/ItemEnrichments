@@ -134,6 +134,8 @@ public class Handlers {
         return str;
     }
     public static void calculateStats(Player p){
+        if(!p.hasPermission("itemenrichments.useenrichments"))
+            return;
         List<ItemStack> items = GenerateENList(p);
         int speed = 0;
         for(ItemStack item:items){
@@ -156,6 +158,8 @@ public class Handlers {
             p.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).addModifier(new AttributeModifier("IEN_SPEED",0.001*speed, AttributeModifier.Operation.ADD_NUMBER));
     }
     public static Integer getStat(Player p,String stat){
+        if(!p.hasPermission("itemenrichments.useenrichments"))
+            return 0;
         List<ItemStack> items = GenerateENList(p);
         int stati = 0;
         for(ItemStack item:items){

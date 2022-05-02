@@ -16,7 +16,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
-    public static boolean debug = true;
+    public static boolean debug = false;
     public static Economy eco;
     public static Config data;
     public static String prefix;
